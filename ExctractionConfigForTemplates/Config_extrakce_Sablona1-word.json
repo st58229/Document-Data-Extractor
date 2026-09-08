@@ -1,0 +1,58 @@
+[
+    {
+        "keyword": "Číslo faktury:",
+        "attribute": "invoice_number"
+    },
+    {
+        "keyword": "Faktura za provedené činnosti v měsíci ",
+        "attribute": "month_name"
+    },
+    {
+        "keyword": "Datum splatnosti: ",
+        "attribute": "due_date"
+    },
+    {
+        "keyword": "Název:",
+        "attribute": "company_name"
+    },
+    {
+        "keyword": "Adresa:",
+        "attribute": "address"
+    },
+    {
+        "keyword": "IČO:",
+        "attribute": "ico"
+    },
+    {
+        "keyword": "DIČ",
+        "attribute": "dic"
+    },
+    {
+        "keyword": "Telefonní číslo:",
+        "attribute": "phone_number"
+    },
+    {
+        "keyword": "Banka:",
+        "attribute": "bank_name"
+    },
+    {
+        "keyword": "Číslo účtu:",
+        "attribute": "bank_account"
+    },
+    {
+        "keyword": "VS:",
+        "attribute": "variable_symbol"
+    },
+    {
+        "keyword": "Celková částka:",
+        "attribute": "total_amount"
+    },
+    {
+        "keyword": "Datum vystavení:",
+        "attribute": "date_issued"
+    },
+    {
+        "keyword": "Vystaveno v:",
+        "attribute": "created_in"
+    }
+]

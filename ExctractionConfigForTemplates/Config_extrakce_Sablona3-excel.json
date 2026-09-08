@@ -1,0 +1,62 @@
+[
+    {
+        "cell": "C1",
+        "attribute": "invoice_number"
+    },
+    {
+        "cell": "E4",
+        "attribute": "company_name"
+    },
+    {
+        "cell": "E5",
+        "attribute": "address"
+    },
+    {
+        "cell": "E6",
+        "attribute": "ico"
+    },
+    {
+        "cell": "E7",
+        "attribute": "dic"
+    },
+    {
+        "cell": "E9",
+        "attribute": "bank_name"
+    },
+    {
+        "cell": "E10",
+        "attribute": "bank_account"
+    },
+    {
+        "cell": "E11",
+        "attribute": "iban"
+    },
+    {
+        "cell": "E13",
+        "attribute": "phone_number"
+    },
+    {
+        "cell": "B15",
+        "attribute": "variable_symbol"
+    },
+    {
+        "cell": "B16",
+        "attribute": "due_date"
+    },
+    {
+        "cell": "B17",
+        "attribute": "total_amount"
+    },
+    {
+        "cell": "F16",
+        "attribute": "month_name"
+    },
+    {
+        "cell": "B21",
+        "attribute": "created_in"
+    },
+    {
+        "cell": "B22",
+        "attribute": "date_issued"
+    }
+]

@@ -1,0 +1,48 @@
+Sablona_Excel_Faktura1
+
+        sheet["E1"] = invoice_number
+
+	#Dodavatel
+	sheet["E4"] = company_name
+	sheet["E5"] = address
+	sheet["E6"] = ico
+	sheet["E7"] = ""
+	sheet["E8"] = f"CZ{ico}"
+	sheet["E9"] = bank_name
+	sheet["E10"] = bank_account
+	sheet["E11"] = ""
+	sheet["E12"] = phone_number
+
+	sheet["E15"] = variable_symbol
+	sheet["E16"] = due_date
+	sheet["E17"] = total_amount
+
+	sheet["A20"] = month_name
+
+	sheet["A25"] = city_name
+	sheet["A26"] = date_issued
+
+Sablona_Excel_Faktura2 & Sablona_Excel_Faktura3
+
+    sheet["C1"] = invoice_number
+
+	#Dodavatel
+	sheet["E4"] = company_name
+	sheet["E5"] = address
+	sheet["E6"] = ico
+	sheet["E7"] = f"CZ{ico}"
+	sheet["E9"] = bank_name
+	sheet["E10"] = bank_account
+	sheet["E11"] = ""
+	sheet["E13"] = phone_number
+
+	sheet["B15"] = variable_symbol
+	sheet["B16"] = due_date
+	sheet["B17"] = total_amount
+
+	sheet["F16"] = month_name
+
+	sheet["B21"] = city_name
+	sheet["B22"] = date_issued
+
+	
