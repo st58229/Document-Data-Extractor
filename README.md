@@ -1,95 +1,90 @@
-# Big Data Processing App
+# Document-Data-Extractor
+An open-source, GUI-based Python application for extracting data from heterogeneous business documents (Excel, Word, PDF) into structured JSON/CSV formats in resource-constrained environments.
 
-A desktop application built with Python and Tkinter for processing and extracting structured data from **Excel**, **PDF**, and **Word** files. The tool supports conversion between CSV/JSON formats, selective attribute extraction, and merging of JSON files.
+This tool is specifically tailored for small and medium-sized enterprises (SMEs) and non-technical users, providing a zero-code workflow to transform semi-structured office documents (Excel, PDF, Word) into structured JSON or CSV formats ready for downstream analysis or database insertion.
 
-## Features
+## Key Features
 
-- ✅ Select individual files or entire folders for processing
-- 📄 Extract data from specified Excel cells
-- 📄 Extract values from Word or PDF files using keywords
-- 🔄 Convert CSV ↔ JSON (configurable delimiter and decimal)
-- 🔧 Define and import/export extraction settings
-- 🧠 Merge multiple JSON files into one
-- 📊 Track progress with a built-in progress bar
-- 📁 View detailed file info (count, size, paths)
-- 📂 Export processed data to JSON or convert it to CSV
-- ℹ️ Easy-to-use graphical interface (Tkinter)
+* **Zero-Code GUI Extraction Mapping:** Define data extraction rules visually through the interface without requiring database administration or programming skills.
 
----
 
-## Installation
+* **Format Support:** Native processing capabilities for `.xlsx`, `.docx`, `.pdf`, and `.csv` files.
 
-### Prerequisites
 
-Ensure you have Python 3.8+ installed. Then install the required libraries:
+* **Sequential Batch Processing:** Operates with $O(N)$ time complexity, ensuring predictable and bounded memory usage even when processing batches of up to 10,000 documents on standard office hardware.
 
+
+* **Error Recovery and Auditing:** Generates detailed error logs for missing keywords or corrupted files, allowing users to correct mapping errors for specific files without terminating the entire batch process.
+
+
+* **Targeted Data Reduction:** Extracts only user-defined fields (e.g., Invoice Number, Total, Date), discarding XML and layout overhead, which results in significantly smaller structured output files.
+
+
+
+## Repository Structure
+
+* `src/` – The complete source code of the Python application.
+
+
+* `example_configs/` – Example JSON configuration files demonstrating extraction rules for Excel and text-based documents.
+
+
+* `synthetic_data_generator/` – A Python script utilizing the *Faker* library to generate synthetic document datasets. This ensures full reproducibility of the experimental results and performance metrics.
+
+
+
+## Requirements
+
+* Python 3.10+
+
+
+* `pandas`
+
+* `PyMuPDF`
+
+* `openpyxl`
+
+* `python-docx`
+
+* `Tkinter` (Standard Python library for the GUI)
+
+
+
+## Installation and Usage
+
+1. Clone this repository:
 ```bash
-pip install pandas openpyxl PyMuPDF python-docx
+git clone https://github.com/your-username/Document-Data-Extractor.git
+
 ```
 
----
 
-## Usage
-
-1. **Run the application**:
-
+2. Install the required dependencies:
 ```bash
-python app.py
+pip install -r requirements.txt
+
 ```
 
-2. **Main actions** (GUI-based):
-   - Select files or folders for processing
-   - Configure extraction settings for:
-     - Excel (specific cells → attributes)
-     - PDF/Word (keywords → attributes)
-   - Export/import your settings to/from `.json`
-   - Start processing and export results to JSON
-   - Optionally convert resulting JSON into CSV
 
----
+3. Launch the application:
+```bash
+python main.py
 
-## JSON Structure
-
-After processing, the exported JSON will be structured as:
-
-```json
-{
-  "file_path_1": {
-    "Attribute1": "Value1",
-    "Attribute2": "Value2"
-  },
-  "file_path_2": {
-    "Attribute1": "Value3",
-    "Attribute2": "Value4"
-  }
-}
 ```
 
----
 
-## Menu Overview
+4. **Using the GUI:** Select your target directory, choose the file format (Excel or Word/PDF), define your extraction mapping rules (e.g., cell coordinates or keyword pairs), and execute the batch process to export directly to JSON or CSV.
 
-- **CSV -> JSON**
-  - Convert structured CSV/Excel to JSON
-  - Set custom delimiter or decimal separator
-- **Merge JSON**
-  - Merge multiple JSON files into one
-- **JSON -> CSV**
-  - Convert processed JSON into structured CSV
-- **About**
-  - Displays app version and author info
 
----
 
-## Author
+## Reproducibility and Synthetic Data
 
-**Tomáš Fráňa**  
-`st58229@upce.cz`  
-Version: `1.0`
+To replicate the performance and memory footprint experiments discussed in our research, navigate to the `synthetic_data_generator/` directory. Run the generation script to create a localized synthetic dataset of business documents (e.g., invoices) in `.xlsx`, `.pdf`, and `.docx` formats.
 
----
+## Academic Citation
 
-## License
+If you utilize this framework in your research, please cite our paper:
 
-This project is distributed for educational and demonstration purposes.  
-Feel free to modify and adapt.
+> Frana, T., Lnenicka, M., & Horak, O. (2026). A Python-based application for document data extraction and preparation in resource-constrained environments. *Array*.
+> 
+>
